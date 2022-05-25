@@ -3,10 +3,19 @@
 A syntax file for edir that highlights a buffer according to the definition of
 **your** [$LS\_COLORS](https://github.com/trapd00r/LS_COLORS) variable.
 
+![screenshot](/extra/screenshot.png)
+
 ### Installation
 
 vim-plug:
 
 ```vim
 Plug 'trapd00r/LS_COLORS-edir.vim'
+Plug 'trapd00r/LS_COLORS-edir.vim',  { 'for': 'LS_COLORS-edir' }
+```
+
+and export `EDIR_EDITOR` accordingly:
+
+```shell
+export EDIR_EDITOR='vim -c ":setf LS_COLORS-edir | set nolist"'
 ```
